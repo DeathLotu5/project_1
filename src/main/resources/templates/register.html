@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}" type="text/css">
+</head>
+<body>
+<!--<h1>Đăng kí</h1>-->
+<!--  <form method="post" th:action="@{/register}">-->
+<!--    <b>Tên của bạn</b> <br>-->
+<!--    <input name="name" type="text" placeholder="Nhập tên của bạn"><br>-->
+<!--      <b>Tên đăng nhập</b> <br>-->
+<!--      <input name="username" type="text" placeholder="Nhập tên đăng nhập"><br>-->
+<!--      <b>Mật khẩu</b> <br>-->
+<!--      <input name="password" type="password" placeholder="Nhập mật khẩu"><br>-->
+<!--      <b>Email</b> <br>-->
+<!--      <input name="email" type="email" placeholder="Nhập email của bạn"><br>-->
+<!--      <button type="submit">Đăng kí</button>-->
+<!--  </form>-->
+
+<!--<a th:href="@{/hi}">Quay về trang chủ</a>-->
+
+
+  <div class="center">
+    <h1>Đăng kí</h1>
+
+    <form method="post" th:action="@{/register}">
+      <div class="txt_field">
+        <input type="text" required name="name">
+        <span></span>
+        <label>Tên của bạn</label>
+      </div>
+      <div class="txt_field">
+        <input type="text" required name="username">
+        <span></span>
+        <label>Tên đăng nhập</label>
+      </div>
+      <div class="txt_field">
+        <input type="password" required name="password">
+        <span></span>
+        <label>Mật khẩu</label>
+      </div>
+      <div class="txt_field">
+        <input type="email" required name="Email">
+        <span></span>
+        <label>Email</label>
+      </div>
+      <p style="color: red" th:if="${e} == success">Tạo tài khoản thành công</p>
+      <input type="submit" value="Đăng kí">
+      <div class="signup_link">
+        <a th:href="@{/hi}">Quay lại trang chủ </a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

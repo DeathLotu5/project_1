@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" type="text/css">
+</head>
+<body>
+<!--<h1>Đăng nhập</h1>-->
+<!--  <form method="post" th:action="@{/login}">-->
+<!--    <b>Username</b> <br/>-->
+<!--    <input type="text" name="username"><br/>-->
+<!--    <b>Password</b><br/>-->
+<!--    <input type="password" name="password"><br/>-->
+<!--    <button type="submit">Login</button>-->
+<!--  </form>-->
+<!--<p style="color: red" th:if="${e} == error">Tài khoản hoặc mật khẩu không đúng</p> <br>-->
+<!--<p style="color: red" th:if="${e} == deny">Tài khoản của bạn không đủ quyền truy cập</p> <br>-->
+<!--<a th:href="@{/register}">Nếu bạn chưa có tài khoản! Nhấn vào đây để đăng kí</a> <br>-->
+<!--<a th:href="@{/hi}">Quay về trang chủ</a>-->
+<div class="center">
+    <h1>Đăng nhập</h1>
+
+    <form method="post" th:action="@{/login}">
+        <div class="txt_field">
+            <input type="text" required name="username">
+            <span></span>
+            <label>Tên đăng nhập</label>
+        </div>
+        <div class="txt_field">
+            <input type="password" required name="password">
+            <span></span>
+            <label>Mật khẩu</label>
+        </div>
+        <p style="color: red" th:if="${e} == error">Mật khẩu hoặc tài khoản không đúng!</p> <br>
+        <div class="pass">Quên mật khẩu</div>
+        <input type="submit" value="Đăng nhập">
+        <div class="signup_link">
+            Bạn chưa có tài khoản? <a th:href="@{/register}">Đăng kí tại đây</a> <br>
+            <a th:href="@{/hi}">Quay lại trang chủ </a>
+        </div>
+    </form>
+</div>
+</body>
+</html>

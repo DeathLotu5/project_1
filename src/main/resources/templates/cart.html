@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1>Giỏ hàng</h1>
+<table>
+    <tr>
+        <th>Tên</th>
+        <th>Số lượng</th>
+        <th>Giá</th>
+        <th>Mô tả</th>
+        <th>Tùy chọn</th>
+    </tr>
+    <tr th:each = "item : ${order.oderItem}">
+        <td th:text="${item.productDTO.productName}"></td>
+        <td th:text="${item.Quanity}"></td>
+        <td th:text="${item.productDTO.price}"></td>
+        <td th:text="${item.productDTO.desc}"></td>
+<!--        <td> <a th:href="@{/delete-item/}">Xóa khỏi giỏ hàng</a></td>-->
+    </tr>
+</table>
+
+<a th:href="@{/hi}">Quay lại trang chủ</a>
+</body>
+</html>
